@@ -1,0 +1,21 @@
+- name: Predix
+  description: Sets the target API endpoint to a Predix API
+  version: __TAG
+  created: 2016-04-07
+  updated: __DATE
+  company: GE Digital
+  authors:
+  - name: Predix
+    homepage: http://predix.io
+    contact: info@predix.io
+  homepage: http://github.com/PredixDev/cf-predix
+  binaries:
+  - platform: osx
+    url: https://github.com/PredixDev/cf-predix/releases/download/v__TAG/predix_osx
+    checksum: __OSX_SHA1
+  - platform: win64
+    url: https://github.com/PredixDev/cf-predix/releases/download/v__TAG/predix_win64.exe
+    checksum: __WIN64_SHA1
+  - platform: linux64
+    url: https://github.com/PredixDev/cf-predix/releases/download/v__TAG/predix_linux64
+    checksum: __LINUX64_SHA1

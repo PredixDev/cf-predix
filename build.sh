@@ -1,12 +1,7 @@
 #!/bin/bash
 
-if [[ "$(which gox)X" == "X" ]]; then
-    echo "Please install gox. https://github.com/mitchellh/gox#readme"
-    exit 1
-fi
-
 rm -rf bin
 mkdir bin
-gox -os darwin -arch amd64 --output="bin/osx/predix"
-gox -os linux -arch amd64 --output="bin/linux64/predix"
-gox -os windows -arch amd64 --output="bin/win64/predix"
+GOOS=darwin GOARCH=amd64 go build -o "bin/osx/predix"
+GOOS=linux GOARCH=amd64 go build -o "bin/linux64/predix"
+GOOS=windows GOARCH=amd64 go build -o "bin/win64/predix.exe"

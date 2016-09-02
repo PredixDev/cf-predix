@@ -23,14 +23,14 @@ Password>
 ```
 $ cf uninstall-plugin 'Predix'
 ```
-#### Install from CF Repo
-```
-$ cf add-plugin-repo CF-Community http://plugins.cloudfoundry.org/
-$ cf install-plugin 'Predix' -r CF-Community
-```
 #### Install using URL
+Lookup the URL for the latest binary for your OS from https://github.com/PredixDev/cf-predix/releases
 ```
 $ cf install-plugin https://github.com/PredixDev/cf-predix/releases/download/<VERSION>/predix_<OS>
+e.g.
+$ cf install-plugin https://github.com/PredixDev/cf-predix/releases/download/<VERSION>/predix_linux64
+$ cf install-plugin https://github.com/PredixDev/cf-predix/releases/download/<VERSION>/predix_osx
+$ cf install-plugin https://github.com/PredixDev/cf-predix/releases/download/<VERSION>/predix_win64.exe
 ```
 #### Install using File
 Download the latest binary for your OS from https://github.com/PredixDev/cf-predix/releases

@@ -16,6 +16,9 @@
   - platform: win64
     url: https://github.com/PredixDev/cf-predix/releases/download/v__TAG/predix_win64.exe
     checksum: __WIN64_SHA1
+  - platform: win32
+    url: https://github.com/PredixDev/cf-predix/releases/download/v__TAG/predix_win32.exe
+    checksum: __WIN32_SHA1
   - platform: linux64
     url: https://github.com/PredixDev/cf-predix/releases/download/v__TAG/predix_linux64
     checksum: __LINUX64_SHA1

@@ -32,9 +32,10 @@ DATE=`date "+%Y-%m-%d"`
 OSX_SHA1=`cat bin/osx/predix | openssl sha1`
 LINUX64_SHA1=`cat bin/linux64/predix | openssl sha1`
 WIN64_SHA1=`cat bin/win64/predix.exe | openssl sha1`
+WIN32_SHA1=`cat bin/win32/predix.exe | openssl sha1`
 
 echo "-------------PLUGIN INFO---------------"
-sed -e "s/__TAG/$TAG/" -e "s/__DATE/$DATE/" -e "s/__OSX_SHA1/$OSX_SHA1/" -e "s/__LINUX64_SHA1/$LINUX64_SHA1/" -e "s/__WIN64_SHA1/$WIN64_SHA1/" repo-index.yml
+sed -e "s/__TAG/$TAG/" -e "s/__DATE/$DATE/" -e "s/__OSX_SHA1/$OSX_SHA1/" -e "s/__LINUX64_SHA1/$LINUX64_SHA1/" -e "s/__WIN32_SHA1/$WIN32_SHA1/" -e "s/__WIN64_SHA1/$WIN64_SHA1/" repo-index.yml
 echo "-------------PLUGIN INFO---------------"
 
 echo ""

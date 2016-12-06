@@ -5,12 +5,9 @@ This plugin sets the CF target API to a Predix API
 ```
 $ cf predix
 
-1. Basic
-2. Select
-Choose the API to set> 1
-Setting api endpoint to <URL>
-OK
-
+1. US West
+2. US East
+Choose the PoP to set> 1
 API endpoint: <URL>
 
 Email>

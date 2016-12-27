@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sks/cf-predix.svg?branch=master)](https://travis-ci.org/sks/cf-predix)
+
 # Predix Plugin
 This plugin sets the CF target API to a Predix API
 

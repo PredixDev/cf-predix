@@ -1,0 +1,8 @@
+language: go
+go:
+- 1.6
+install:
+- go get -v ./...
+- export PATH=$PATH:$HOME/gopath/bin
+script:
+- ./build.sh

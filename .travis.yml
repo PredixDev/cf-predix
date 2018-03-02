@@ -1,8 +1,17 @@
 language: go
+
+go_import_path: github.com/PredixDev/cf-predix
+
+before_install:
+  - go get github.com/onsi/gomega/...
+  - go get github.com/onsi/ginkgo/ginkgo
+
 go:
-- 1.6
+  - "1.x"
+  - "1.8"
+  - "1.10.x"
+  - master
 install:
 - go get -v ./...
-- export PATH=$PATH:$HOME/gopath/bin
 script:
-- ./build.sh
+- make

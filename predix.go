@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/PredixDev/cf-predix/pop"
 	"github.com/PredixDev/cf-predix/version"
 	"github.com/cloudfoundry/cli/plugin"
 )
@@ -22,13 +23,6 @@ func (c *Predix) GetMetadata() plugin.PluginMetadata {
 					Usage: "predix - Prompts for options and sets the API endpoint\n    cf predix",
 				},
 			},
-			{
-				Name:     "version",
-				HelpText: "Prints the version info",
-				UsageDetails: plugin.Usage{
-					Usage: "predix - version",
-				},
-			},
 		},
 	}
 }
@@ -39,14 +33,11 @@ func main() {
 
 func (c *Predix) Run(cliConnection plugin.CliConnection, args []string) {
 	switch args[0] {
-	case "version":
-		fmt.Printf("Predix cf plugin. Version %s [Commit: %s]", version.VersionString, version.CommitSha)
-		break
 	case "predix":
-		choosePop(cliConnection)
+		pop.ChoosePop(cliConnection)
 		break
 	default:
-		fmt.Printf("Not sure how to run the command %s\n", args[0])
+		fmt.Printf("Not sure how to run the command %q\n", args[0])
 		os.Exit(1)
 		return
 	}
